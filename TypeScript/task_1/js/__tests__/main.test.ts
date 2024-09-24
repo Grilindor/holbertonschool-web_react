@@ -1,6 +1,7 @@
 import { Teacher } from '../main';
 import { Directors } from '../main';
 import { printTeacher } from '../main';
+import { StudentClass } from '../main';
 
 describe('Teacher Interface', () => {
     it('should create a teacher object', () => {
@@ -43,5 +44,14 @@ describe('printTeacher function', () => {
     it('should return the correct format: first initial and last name', () => {
         expect(printTeacher("John", "Doe")).toBe("J. Doe");
         expect(printTeacher("Jane", "Smith")).toBe("J. Smith");
+    });
+});
+
+
+describe('StudentClass', () => {
+    it('should return the correct displayName and workOnHomework message', () => {
+        const student = new StudentClass("Jane", "Smith");
+        expect(student.displayName()).toBe("Jane");
+        expect(student.workOnHomework()).toBe("Currently working");
     });
 });
