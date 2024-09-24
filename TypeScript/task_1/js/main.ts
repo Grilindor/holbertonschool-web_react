@@ -7,6 +7,18 @@ export interface Teacher {
 	[key: string]: any;
 }
 
+export interface Directors extends Teacher {
+	numberOfReports: number;
+}
+
+const director1: Directors = {
+	firstName: 'John',
+	lastName: 'Doe',
+	location: 'London',
+	fullTimeEmployee: true,
+	numberOfReports: 17,
+}
+
 const teacher: Teacher = {
     firstName: "John",
     lastName: "Doe",
@@ -16,3 +28,4 @@ const teacher: Teacher = {
 };
 
 console.log(teacher);
+console.log(director1);
