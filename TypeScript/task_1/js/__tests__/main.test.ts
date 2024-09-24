@@ -1,5 +1,6 @@
 import { Teacher } from '../main';
 import { Directors } from '../main';
+import { printTeacher } from '../main';
 
 describe('Teacher Interface', () => {
     it('should create a teacher object', () => {
@@ -34,5 +35,13 @@ describe('Directors Interface', () => {
         expect(director1.location).toBe('London');
         expect(director1.fullTimeEmployee).toBe(true);
         expect(director1.numberOfReports).toBe(17);
+    });
+});
+
+
+describe('printTeacher function', () => {
+    it('should return the correct format: first initial and last name', () => {
+        expect(printTeacher("John", "Doe")).toBe("J. Doe");
+        expect(printTeacher("Jane", "Smith")).toBe("J. Smith");
     });
 });
