@@ -55,3 +55,15 @@ export function executeWork(employee: Teacher | Director): string {
 	  return employee.workTeacherTasks();
 	}
 }
+
+  // Type littéral pour Subjects
+  export type Subjects = 'Math' | 'History';
+
+  // Fonction teachClass
+  export function teachClass(todayClass: Subjects): string {
+	if (todayClass === 'Math') {
+	  return 'Teaching Math';
+	} else {
+	  return 'Teaching History';
+	}
+  }
